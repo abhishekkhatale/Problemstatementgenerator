@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildBoard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="script2.js" defer></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: -59px 31px 143px -19px rgba(0,0,0,0.27);
+            -moz-box-shadow: -59px 31px 143px -19px rgba(0,0,0,0.27);
+            box-shadow: -59px 31px 143px -19px rgba(0,0,0,0.27);
+            width: 100%;
+            max-width: 400px;
+            border: solid 2px rgba(0, 0, 0, 0.181);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #000;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #666;
+            background: white;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .result-card {
+            background: #ebebeb;
+            padding: 1.5rem;
+            border-radius: 5px;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .result-card h2 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .result-card p {
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.4;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 14px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .generate-btn:hover {
+            background: #333;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .form-group label {
+                font-size: 14px;
+            }
+
+            .result-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div>
+                <h1>BuildBoard</h1>
+                <p>Generate your next project idea</p>
+            </div>
+            <img src="bulb.png" alt="" class="icon">
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <select id="categorySelect">
+                <option value="" disabled selected>Select category</option>
+                <option value="Web Application">Web Application</option>
+                <option value="Mobile App">Mobile App</option>
+                <option value="Desktop Software">Desktop Software</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Difficulty</label>
+            <select id="difficultySelect">
+                <option value="" disabled selected>Select difficulty</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </div>
+
+        <div class="result-card">
+            <h2>Parking Space Finder</h2>
+            <p>App to find and reserve parking spots in real-time</p>
+        </div>
+
+        <button class="generate-btn">Generate Idea</button>
+    </div>
+</body>
+</html>
